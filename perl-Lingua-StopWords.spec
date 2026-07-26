@@ -1,15 +1,13 @@
 %define upstream_name    Lingua-StopWords
-%define upstream_version 0.12
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.12
+Release:	2
 
 Summary:	Stop words for several languages
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/wollmers/Lingua-StopWords
-Source0:	https://cpan.metacpan.org/authors/id/W/WO/WOLLMERS/Lingua-StopWords-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/W/WO/WOLLMERS/Lingua-StopWords-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -42,7 +40,7 @@ Supported Languages
         |-----------------------------------------------------------|
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
